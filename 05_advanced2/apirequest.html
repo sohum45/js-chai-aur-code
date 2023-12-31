@@ -17,11 +17,12 @@
         // detection of a state
         if (xhr.readyState === 4) {
             const data = JSON.parse(this.responseText)
-            console.log(typeof data); // type of data received is object
+            console.log(typeof data);
+            console.log(data); // type of data received is object
             console.log(data.name);
+            let avtar = data.avatar_url
         }
     }
-    
     xhr.send(); // send() is used to call open()
 </script>
 </html>
