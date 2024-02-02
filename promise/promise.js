@@ -66,5 +66,21 @@ promise4.then((user) => {
 })
 
 
+const promise5 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if(!error) {
+            resolve({username: "javascript" , password :})
+        }
+        else{
+            reject('Error: JS went wrong')
+        }
+    },1000)
+})
 
+async function consumePromise5() {
+    const response = await promise5
+    console.log(response);
+}
 
+consumePromise5()
