@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+    <!-- <script>
+    // function init() {
+    //     var name = "Mozilla"; 
+    //     function displayName() {
+    //     console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+
+function outer(){
+    let userName = "Vasudev"
+    function inner(){
+        console.log(userName); // inner function can access outer func variable
+    }
+    inner()
+}
+outer()
+console.log("TOO OUTER userName"); // not defined
+
+    </script> -->
+
+    <script>
+        // document.getElementById("orange").onclick = function (){
+
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function (){
+
+        // document.body.style.backgroundColor = `green`
+        // }
+        function clickHandler(color){
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        document.getElementById("green").onclick = clickHandler("green")
+        document.getElementById("orange").onclick = clickHandler("orange")
+    </script>
+</body>
+</html>

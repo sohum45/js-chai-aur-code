@@ -13,7 +13,7 @@ console.log("Loading modules");
 console.log("doing another task ");
 
 console.log("Load data"); // wait becs until u get data how will u process
-let data = getData() // this returns a promise such that  object contains data and can be retrived later
+let data1 = getData() // this returns a promise such that  object contains data and can be retrived later
 
 // jab data hojayee tbb do this func when promise is resovled
 
